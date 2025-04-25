@@ -1,0 +1,8 @@
+import "./footer.css";
+
+Footer();
+{
+  return <footer className="footer">Developed by Patrick Velazquez </footer>;
+}
+
+export default Footer;
