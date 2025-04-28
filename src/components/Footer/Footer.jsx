@@ -1,7 +1,6 @@
 import "./footer.css";
 
-Footer();
-{
+function Footer() {
   return <footer className="footer">Developed by Patrick Velazquez </footer>;
 }
 
