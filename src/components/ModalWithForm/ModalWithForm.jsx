@@ -1,20 +1,14 @@
 import "./ModalWithForm.css";
 
-function ModalWithForm({
-  children,
-  buttonText,
-  titleText,
-  activeModal,
-  onClose,
-}) {
+function ModalWithForm({ children, buttonText, titleText, onClose, isOpen }) {
+  console.log(isOpen);
+
   return (
-    <div
-      className={`modal ${activeModal === "add-garment" && "modal__opened"} `}
-    >
+    <div className={isOpen ? "modal modal_opened" : "modal"}>
       <div className="modal__content">
         <h2 className="modal__title">{titleText}</h2>
         <button onClick={onClose} type="button" className="modal__close">
-          X
+          <img src="src\assets\Union.svg" alt="close__X" />
         </button>
         <form className="modal__form">
           {children}

@@ -39,7 +39,7 @@ function App() {
       })
       .catch(console.error);
   }, []);
-
+  console.log(activeModal);
   return (
     <div className="page">
       <div className="page__content">
@@ -50,18 +50,18 @@ function App() {
       <ModalWithForm
         titleText="New Garment"
         buttonText="Add Garment"
-        activeModal={activeModal}
         onClose={closeActiveModal}
+        isOpen={activeModal === "add-garment"}
       >
-        <label htmlFor="Name" className="modal__label">
+        <label className="modal__label">
           Name: <input type="text" id="Name" className="modal__input" />
         </label>
-        <label htmlFor="ImageURL" className="modal__label">
+        <label className="modal__label">
           Image: <input type="url" id="Image URL" className="modal__input" />
         </label>
         <fieldset className="modal__radio-buttons">
           <legend className="modal__legend">Select The Weather Type:</legend>
-          <label htmlFor="hot" className="modal__label modal__label_type_radio">
+          <label className="modal__label modal__label_type_radio">
             <input
               id="hot"
               type="radio"
@@ -70,10 +70,7 @@ function App() {
             ></input>
             Hot
           </label>
-          <label
-            htmlFor="warm"
-            className="modal__label modal__label_type_radio"
-          >
+          <label className="modal__label modal__label_type_radio">
             <input
               id="warm"
               type="radio"
@@ -82,10 +79,7 @@ function App() {
             ></input>
             Warm
           </label>
-          <label
-            htmlFor="cold"
-            className="modal__label modal__label_type_radio"
-          >
+          <label className="modal__label modal__label_type_radio">
             <input
               id="cold"
               type="radio"

@@ -2,7 +2,7 @@
   visibility: hidden;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -17,6 +17,8 @@
 .modal__close {
   background-color: transparent;
   color: #000;
-  right: -5px;
-  top: -5px;
+  right: 1px;
+  top: 5px;
+  size: 16px 16px;
+  border: none;
 }
